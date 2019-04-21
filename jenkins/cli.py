@@ -6,7 +6,7 @@ import dotenv
 from .api import JenkinsApi
 
 
-dotenv.load_dotenv()
+dotenv.load_dotenv(dotenv_path=os.path.join(os.getenv('HOME', '.'), '.jenkins-env'))
 
 
 HOSTNAME = os.getenv('JENKINS_HOST')
