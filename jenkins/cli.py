@@ -50,7 +50,7 @@ def job(api, job):
 @click.option('-g', '--git', 'job_action', flag_value='git')
 @click.option('-s', '--stdout', 'job_action', flag_value='stdout')
 @click.option('--default', 'job_action', flag_value='run', default=True)
-def run(api, job, run, job_action='job'):
+def run(api, job, run, job_action):
     action = getattr(api, job_action)
     return action(job, run)
 
